@@ -218,6 +218,21 @@
       margin-top: 3%;
       line-height: 1.8em;
     }
+
+    .expandable-container {
+      //display: flex;
+      //justify-content: space-evenly;
+      //align-items: center;
+
+      display: flex;
+      justify-content: space-between;
+
+      .approach-item-container {
+        flex-basis: 33%;
+      }
+
+
+    }
   }
 
 }

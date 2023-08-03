@@ -126,8 +126,10 @@ const Home = () => {
                     <h1 className="title">Our Approach</h1>
                     <p>A platform solution that creates an Efficient (low cost), Calibrated (risk controlled) and Scalable methodology to deliver tech-enabled credit solutions to small businesses (MSMEs). The technology first approach enables Anchors to leverage their existing supply chain data to offer competitive and innovative financial solutions to their ecosystem partners while optimising their margins.</p>
 
-                    <div className="">
+                    <div className="expandable-section">
+                        <div className="approach-item-container">
 
+                        </div>
                     </div>
                 </div>
 
