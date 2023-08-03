@@ -1,0 +1,223 @@
+.Home {
+
+  .diamond-shape {
+    background: #53ace0;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    transform:rotate(45deg);
+    margin-right: 16px;
+  }
+
+  .diamond-bullet {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .banner-section {
+    height: 500px;
+    background-color: lavenderblush;
+  }
+
+  .intro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5% 10% 5% 10%;
+
+    .text-container {
+      div {
+        margin-left: 5%;
+        line-height: 1.5em;
+      }
+    }
+
+    .image-container {
+      padding: 2%;
+      width: 150%;
+      img {
+        width: 100%;
+        filter: drop-shadow(-20px 20px 0 #53ace0);
+      }
+    }
+  }
+
+  .our-edge {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+
+    .image-container {
+      padding: 2%;
+      width: 50%;
+      img {
+        width: 100%;
+        float: right;
+        filter: drop-shadow(20px 20px 0 #f79256);
+      }
+    }
+
+    .text-container {
+      .title-container {
+        //margin: 4% 15%;
+
+        .titles {
+          display: flex;
+          justify-content: flex-start;
+          //flex-wrap: wrap;
+          .title-button {
+            background-color: #f79256;
+            border: 1px solid #f79256;
+            padding: 10px 32px;
+            margin-right: 32px;
+            border-radius: 16px;
+            cursor: pointer;
+            font-family: Avenir-light, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            //margin-bottom: 10%;
+            a {
+              color: #000;
+            }
+          }
+
+          .title-button:hover {
+            //border: 1px solid #fff;
+
+              color: #fff;
+
+          }
+        }
+
+
+
+      }
+
+      .our-edge-content-container {
+
+        .content-item-container {
+          margin-right: 4%;
+          width: 700px;
+          height: 50px;
+          li {
+            margin-top: 4%;
+          }
+        }
+      }
+    }
+  }
+
+  .solutions {
+    .title {
+      text-align: center;
+    }
+
+    .solutions-container {
+      //display: flex;
+      //justify-content: space-evenly;
+      //align-items: flex-start;
+
+      display: flex;
+      justify-content: space-between;
+
+      .solution-item {
+        flex-basis: 33%;
+        box-sizing: border-box;
+        //position: relative;
+
+        border-radius: 20px;
+        width: 32%;
+        min-height: 250px;
+
+        .title {
+          font-size: 22px;
+          padding-top: 32px;
+          padding-bottom: 16px;
+        }
+
+        .img-container {
+          height: 30%;
+          margin-bottom: 20%;
+
+          img {
+            width: 100%;
+          }
+
+        }
+
+        .logo-container {
+          text-align: center;
+          img {
+            width: 50%;
+          }
+        }
+
+        .button-container {
+          display: flex;
+          justify-content: center;
+          button {
+            padding: 8px;
+            background-color: #53ace0;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+
+            //position: absolute;
+            //top: 50%;
+            //left: 50%;
+            //-ms-transform: translate(-50%, -50%);
+            //transform: translate(-50%, -50%);
+          }
+        }
+
+
+        .text {
+          margin: 8%;
+          height: 20%;
+          div {
+            margin-bottom: 16px;
+          }
+        }
+      }
+
+      .solution-item.vendorkredit {
+        background-color: #fff9f0;
+      }
+
+      .solution-item.marketkredit {
+        background-color: #eff9fe;
+      }
+
+      .solution-item.novakredit {
+        background-color: #f0edff;
+      }
+    }
+  }
+
+
+  .quote-container {
+    background-color: #2a1b5b;
+    padding: 4%;
+    margin: 10% 0;
+    h1,p {
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .our-approach-container {
+    margin: 5%;
+    .title {
+      color: #2a1b5b;
+      text-align: center;
+    }
+    p {
+      margin-top: 3%;
+      line-height: 1.8em;
+    }
+  }
+
+}

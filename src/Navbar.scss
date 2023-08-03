@@ -1,0 +1,134 @@
+.Navbar {
+  font-family: Poppins, sans-serif !important;
+  font-size: 18px;
+
+  .nav-bar {
+    box-shadow: 0 -3px 9px 0 rgba(0,0,0,.5);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    z-index: 2000;
+    width: 100%;
+    //overflow: hidden;
+    padding: 0 8px 0 8px;
+
+    .navbar_logo {
+      .logo-container .logo {
+        width: 15vw;
+        padding: 8px;
+      }
+    }
+
+    .nav-menu-items-container {
+      .nav-menu-items {
+              list-style: none;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              margin-top: 0;
+              margin-bottom: 0;
+      }
+      .menu-item {
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        list-style: none;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background 500ms;
+      }
+
+            .menu-item:hover {
+              background-color: #e6e7e8;
+            }
+
+            .menu-link {
+              text-decoration: none;
+              padding: 16px;
+              display: flex;
+              color: #000;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  .nav-bar {
+//  box-shadow: 0 -3px 9px 0 rgba(0,0,0,.5);
+//  height: 70px;
+//  display: flex;
+//  justify-content: space-between;
+//  align-items: center;
+//
+//  position: fixed;
+//  background-color: #fff;
+//  z-index: 2000;
+//  width: 100%;
+//  //overflow: hidden;
+//  padding: 0 8px 0 8px;
+//
+//  .nav-logo__name {
+//    display: flex;
+//    align-items: center;
+//    a {
+//      color: #000;
+//      //display: flex;
+//      //align-items: center;
+//    }
+//
+//    .logo-container img {
+//      //width: 100%;
+//      width: 15vw;
+//      padding: 8px;
+//    }
+//
+//    .logo-container-mobile {
+//      .logo-mobile {
+//        width: 50%;
+//      }
+//    }
+//  }
+//    .nav-menu-items {
+//      list-style: none;
+//      display: flex;
+//      align-items: center;
+//      justify-content: flex-start;
+//      margin-top: 0;
+//      margin-bottom: 0;
+//
+//      .menu-item {
+//        list-style: none;
+//        cursor: pointer;
+//        border-radius: 8px;
+//        transition: background 500ms;
+//      }
+//
+//      .menu-item:hover {
+//        background-color: #e6e7e8;
+//      }
+//
+//      .menu-link {
+//        padding: 16px;
+//        display: flex;
+//        color: #000;
+//        &:hover {
+//          cursor: pointer;
+//        }
+//      }
+//    }
+//}
+}
