@@ -10,19 +10,48 @@ import saasprovider from './assets/saas-provider.png';
 import vk from './assets/vendorkredit.png';
 import mk from './assets/marketkredit.png';
 import nk from './assets/novakredit.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import vikram from './assets/vikram.png';
+import saif from './assets/saif.png';
+import bharat from './assets/bharat.png';
+import prajit from './assets/prajit.png';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 const Home = () => {
 
     const [selectedTitle, setSelectedTitle] = useState('');
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     useEffect(() => {
         setSelectedTitle('Supply Chain and Financial Expertise');
         console.log(selectedTitle)
-    }, []);
+    }, [dropdownOpen]);
 
     const diamondShape = () => (
         <div className="diamond-shape" />
     );
+
+    const angleDown = <FontAwesomeIcon icon={faAngleDown} />;
+    const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />;
+
+
+    // const userDropdownMenu = () => (
+        {/*<div className="drop-down">*/}
+
+        {/*    <>*/}
+        {/*        <Link to={} className="dropdown-menu-item">*/}
+        {/*            Dashboard*/}
+        {/*        </Link>*/}
+        {/*        <span onClick={ () => {*/}
+        {/*            logout(() => handleLogOut());*/}
+        {/*            // setDropdownOpen(false);*/}
+        {/*        }*/}
+        {/*        } className="dropdown-menu-item" >Logout</span>*/}
+        {/*    </>*/}
+        {/*    */}
+        {/*</div>*/}
+    // );
 
 
     return(
@@ -128,9 +157,92 @@ const Home = () => {
 
                     <div className="expandable-section">
                         <div className="approach-item-container">
+                            <div className="expand-button">
+                                {angleDown}
+                                <span onClick={() => setDropdownOpen(!dropdownOpen)}>Efficient</span>
+                            </div>
+                            {/*{dropdownOpen && userDropdownMenu()}*/}
 
                         </div>
+                        <div className="approach-item-container">
+                            <div className="expand-button">
+                                {angleDown}
+                                <span>Calibrated</span>
+                            </div>
+                        </div>
+                        <div className="approach-item-container">
+                            <div className="expand-button">
+                                {angleDown}
+                                <span>Scalable</span>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+
+                <div className="our-team-container">
+                    <h1 className="title">Our Team</h1>
+
+                    <div className="team-members">
+                    <div className="team-member">
+                        <img src={vikram} />
+                        <div className="info-section">
+                            <div className="name-container">
+                                <h3 className="name">Vikram Nirula</h3>
+                                <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                            </div>
+                            <div className="designation">Co-Founder, KreditServe</div>
+                            <div className="info">Vikram Nirula has over 20 years of underwriting and investing experience in India. He has been a founding team member of a private equity fund called True North (earlier called India Value Fund) and MD at The Carlyle Group. Vikram has invested in and managed a portfolio of several financial services, consumer and manufacturing companies. Vikram is an MBA from the Indian institute of Management – Bangalore and an engineer (computer science) from the Birla Institute of Technology.</div>
+                        </div>
+                    </div>
+
+                    <div className="team-member">
+                        <img src={saif} />
+                        <div className="info-section">
+                            <div className="name-container">
+                                <h3 className="name">Saif Hasan</h3>
+                                <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                            </div>
+                            <div className="designation">Co-Founder, KreditServe</div>
+                            <div className="info">Saif Hasan has more than 15 years of Sales and Strategic Alliances experience With Consumer Banks and Private Wealth Firm He was Director with IIFL Wealth . Prior to IIFL, he used to head Citibank consumer branches in Mumbai, leading teams on Liabilities, Assets, Insurance, Wealth and Operations. Saif is a Post Graduate in Business Economics( MBE) from University of Delhi and a Graduate in Commerce from BHU.</div>
+                        </div>
+                    </div>
+
+
+                    <div className="team-member">
+                        <img src={bharat} />
+                        <div className="info-section">
+                            <div className="name-container">
+                                <h3 className="name">Bharat Khemka</h3>
+                                <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                            </div>
+                            <div className="designation">Founding member, KreditServe</div>
+                            <div className="info">Presently Founder, CEO of a software solutions company based in Mumbai. Greater than 17 years of experience in consulting developing and operating end to end solutions for the alternative asset management industry. He holds a MBA and BS in Computer Science from a leading university in United States.</div>
+                        </div>
+                    </div>
+
+
+                    <div className="team-member">
+                        <img src={prajit} />
+                        <div className="info-section">
+                            <div className="name-container">
+                                <h3 className="name">Prajit Chandrasekhar</h3>
+                                <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                            </div>
+                            <div className="designation">Head of Operations</div>
+                            <div className="info">Prajit has over 20 years of experience in the corporate bank, Investment Bank and Fintech platforms. He was the COO of Morgan Stanley’s Global Research Operations team based in Mumbai. Before joining KreditServe, Prajit headed the Operations at RXIL (TReDS platform). Prajit holds the PGPMAX (Global MBA) degree from Indian School of Business (ISB).</div>
+                        </div>
+                    </div>
+                    </div>
+
+
+
+
+
+
+
+
+
                 </div>
 
             </div>
