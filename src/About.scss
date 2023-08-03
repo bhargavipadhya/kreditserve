@@ -3,11 +3,17 @@
 
   .diamond-shape {
     background: #53ace0;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     text-align: center;
     transform:rotate(45deg);
+    margin-right: 16px;
+  }
 
+  .diamond-bullet {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .about-section {
@@ -34,10 +40,18 @@
         margin-right: 10%;
       }
 
+      .text {
+        margin: 8%;
+        //height: 20%;
+        div {
+          margin-bottom: 16px;
+        }
+      }
+
       ul {
         margin-left: 20%;
         margin-right: 10%;
-        list-style: none;
+        //list-style: none;
       }
 
       li {
@@ -50,6 +64,52 @@
       img {
         width: 75%;
         filter: drop-shadow(-20px 20px 0 #53ace0);
+      }
+    }
+  }
+
+  .who-we-are-mobile {
+    margin-top: 5%;
+
+    .text-container {
+
+      .title {
+        font-size: 35px;
+        font-weight: 600;
+        color: #2a1b5b;
+        margin-left: 25%;
+        margin-right: 10%;
+      }
+
+      .text {
+        margin: 8%;
+        height: 20%;
+        div {
+          margin-bottom: 16px;
+        }
+      }
+
+      ul {
+        margin: 5%;
+        //margin-left: 20%;
+        //margin-right: 10%;
+        //list-style: none;
+      }
+
+      li {
+        padding: 2% 0;
+        line-height: 1.5em;
+      }
+    }
+
+    .image-container {
+      //padding: 2%;
+      margin-top: 15%;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100%;
+        //filter: drop-shadow(-20px 20px 0 #53ace0);
       }
     }
   }
@@ -83,7 +143,7 @@
       ul {
         margin-left: 10%;
         margin-right: 20%;
-        list-style: none;
+        //list-style: none;
       }
 
       li {
@@ -101,80 +161,185 @@
     }
   }
 
-  .our-advisors {
-    margin-top: 10%;
-    .title {
-      text-align: center;
+
+  .vision-mobile {
+    //display: flex;
+    //justify-content: space-around;
+    //align-items: center;
+    margin-top: 5%;
+
+    .text-container {
+
+      .title {
+        font-size: 35px;
+        font-weight: 600;
+        color: #2a1b5b;
+        margin-left: 10%;
+        margin-right: 20%;
+      }
+
+      i {
+        font-weight: bold;
+        color: #2a1b5b;
+      }
+
+      p {
+        margin-left: 10%;
+        margin-right: 20%;
+      }
+
+      ul {margin: 5%;
+        //margin-left: 10%;
+        //margin-right: 20%;
+        //list-style: none;
+      }
+
+      li {
+        padding: 1.5% 0;
+      }
     }
 
-    .advisor-container {
+    .image-container {
+      //padding: 2%;
+      margin-top: 35%;
+      img {
+        //float: right;
+        width: 100%;
+        //filter: drop-shadow(20px 20px 0 #53ace0);
+      }
+    }
+  }
+
+
+
+  .our-team-container {
+    margin-top: 10%;
+
+    .title {
+      text-align: center;
+      color: #2a1b5b;
+    }
+
+    .team-members {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-wrap: wrap;
+      margin: 5%;
 
-      .main-container {
-        //text-align: center;
-        .section1 {
-          text-align: center;
-          //width: 50%;
-          img {
-            width: 50%;
-          }
-        }
 
-        .section2 {
+      .team-member {
+        border: 1px solid #e6e7e8;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex: 45%;
+        margin: 8px;
+        img {
           width: 50%;
-          //position: absolute;
-          //top: 55%;
-          //left: 50%;
-          //transform: translate(-50%, -50%);
-
-          .name_linkedin {
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px;
-
-            .name {
-              font-size: 22px;
-              font-weight: bold;
-            }
-
-            .icon {
-              font-size: 22px;
-              a {
-                color: #000000;
-              }
-            }
-          }
-
-          .designation {
-            padding: 16px;
-            padding-top: 0;
-            color: #737373;
-            font-size: 17px;
-          }
-        }
-
-
-        .section3 {
-
-          padding: 16px;
-
-          .about {
-            width: 50%;
-            word-wrap: break-word;
-            overflow: auto;
-            background-color: lightblue;
-            //width: 30%;
-          }
         }
       }
 
+      .info-section {
+        margin: 4%;
+        width: 50%;
+
+        .name-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .name {
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          .icon {
+            font-size: 24px;
+            a {
+              color: black;
+            }
+          }
+        }
+        .designation {
+          color: #737373;
+        }
+
+        .info {
+          font-size: 14px;
+          padding-top: 16px;
+        }
+      }
+    }
+  }
+
+  .our-team-container-mobile {
+    margin-top: 30%;
+
+    .title {
+      text-align: center;
+      color: #2a1b5b;
     }
 
+    .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 5%;
 
+
+      .team-member {
+        border: 1px solid #e6e7e8;
+        //display: flex;
+        //justify-content: flex-start;
+        //align-items: flex-start;
+        //flex: 45%;
+        margin: 5%;
+        .img_name_title {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+        img {
+          width: 40%;
+        }
+
+        .info {
+          font-size: 14px;
+          padding: 16px 8px 8px 8px;
+        }
+      }
+
+      .info-section {
+        margin: 4%;
+        width: 50%;
+
+        .name-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .name {
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          .icon {
+            font-size: 18px;
+            a {
+              color: black;
+            }
+          }
+        }
+        .designation {
+          color: #737373;
+          font-size: 14px;
+          padding-top: 8px;
+        }
+
+
+      }
+    }
   }
+  
 
 }

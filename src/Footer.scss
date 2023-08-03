@@ -11,4 +11,13 @@
     align-items: center;
     margin: 2% 0;
   }
+
+  .info-mobile {
+    margin: 5%;
+
+    div:nth-child(2) {
+      margin-top: 5%;
+    }
+  }
+
 }

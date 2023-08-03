@@ -8,6 +8,7 @@ import rohit from '../src/assets/rohit.png';
 import abidali from '../src/assets/abidali.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import {phoneCheck} from "./browserCheck";
 
 const About = () => {
 
@@ -25,82 +26,175 @@ const About = () => {
                 <h1>ABOUT US</h1>
             </div>
 
-            <div className="who-we-are">
-                <div className="text-container">
-                    <h1 className="title">Who we are</h1>
-                    <ul>
-                        {diamondShape()} <li> A highly experienced team of professionals with background in financial services, investing and technology</li>
-                        <li>Extensive experience in working with mid-market companies and influencing and advising entrepreneurs and management teams</li>
-                        <li>Passionate about creating a positive impact in the MSME eco-system</li>
-                        <li>String belief that banking and credit solutions can be significantly optimised and reengineered by leveraging technology</li>
-                        <li>Shared belief in integrity and governance</li>
-                        <li>Experience that the best work environments are made up people with diverse backgrounds, ideas and beliefs. We actively work towards maintaining a diverse workforce, promoting individuality and ensuring an inclusive work environment</li>
-                        <li>Focus on building a scalable and enduring business</li>
-                    </ul>
+            {phoneCheck() ?
 
-                </div>
-                <div className="image-container">
-                    <img src={image1} />
-                </div>
-            </div>
+                <div className="who-we-are-mobile">
+                    <div className="image-container">
+                        <img src={image1} />
+                    </div>
 
-            <div className="vision">
-                <div className="image-container">
-                    <img src={image2} />
-                </div>
-                <div className="text-container">
-                    <h1 className="title">Vision</h1>
-                    <ul>
-                        <li> Be the leading B2B finance platform offering innovative technology led credit solutions to the MSME eco-system of corporates, marketplaces and SaaS companies</li>
-                        <li>Offer risk optimised products to lending partners</li>
-                    </ul>
-                    <h1 className="title">Kreditserve's 3T framework</h1>
-                    <p>Kreditserve products reflect our core belief that sustainable business eco-sytems are built through 3Ts – Trust, Transparency and Technology</p>
-                    <ul>
-                        <li><i>Trust</i> is the bedrock of a sustainable business ecosystem</li>
-                        <li><i>Trust</i> is based on <i>Transparency</i></li>
-                        <li><i>Technology</i> enables <i>Transparency</i> in a seamless and efficient manner</li>
-                    </ul>
-                </div>
-            </div>
+                    <div className="text-container">
+                        <h1 className="title">Who are we</h1>
+                        {/*<div className="text">*/}
+                        {/*    <div className="diamond-bullet">{diamondShape()} A highly experienced team of professionals with background in financial services, investing and technology</div>*/}
+                        {/*    <div className="diamond-bullet">{diamondShape()} Extensive experience in working with mid-market companies and influencing and advising entrepreneurs and management teams</div>*/}
+                        {/*    <div className="diamond-bullet">{diamondShape()} Passionate about creating a positive impact in the MSME eco-system</div>*/}
+                        {/*    <div className="diamond-bullet">{diamondShape()} String belief that banking and credit solutions can be significantly optimised and reengineered by leveraging technology</div>*/}
+                        {/*    <div className="diamond-bullet">{diamondShape()} Shared belief in integrity and governance</div>*/}
+                        {/*    <div className="diamond-bullet">{diamondShape()} Experience that the best work environments are made up people with diverse backgrounds, ideas and beliefs. We actively work towards maintaining a diverse workforce, promoting individuality and ensuring an inclusive work environment</div>*/}
+                        {/*    <div className="diamond-bullet">{diamondShape()} Focus on building a scalable and enduring business</div>*/}
+                        {/*</div>*/}
 
-            <div className="our-advisors">
-                <h1 className="title">Our Advisors</h1>
-                <div className="advisor-container">
+                        <ul>
+                            <li> A highly experienced team of professionals with background in financial services, investing and technology</li>
+                            <li>Extensive experience in working with mid-market companies and influencing and advising entrepreneurs and management teams</li>
+                            <li> Passionate about creating a positive impact in the MSME eco-system</li>
+                            <li> String belief that banking and credit solutions can be significantly optimised and reengineered by leveraging technology</li>
+                            <li> Shared belief in integrity and governance</li>
+                            <li> Experience that the best work environments are made up people with diverse backgrounds, ideas and beliefs. We actively work towards maintaining a diverse workforce, promoting individuality and ensuring an inclusive work environment</li>
+                            <li> Focus on building a scalable and enduring business</li>
+                        </ul>
+                    </div>
+                </div>
+                :
+                <div className="who-we-are">
+                    <div className="text-container">
+                        <h1 className="title">Who are we</h1>
+                        {/*<div className="text">*/}
+                        {/*    <div className="diamond-bullet">{diamondShape()} A highly experienced team of professionals with background in financial services, investing and technology</div>*/}
+                        {/*    <div className="diamond-bullet">{diamondShape()} Extensive experience in working with mid-market companies and influencing and advising entrepreneurs and management teams</div>*/}
+                        {/*    <div className="diamond-bullet">{diamondShape()} Passionate about creating a positive impact in the MSME eco-system</div>*/}
+                        {/*    <div className="diamond-bullet">{diamondShape()} String belief that banking and credit solutions can be significantly optimised and reengineered by leveraging technology</div>*/}
+                        {/*    <div className="diamond-bullet">{diamondShape()} Shared belief in integrity and governance</div>*/}
+                        {/*    <div className="diamond-bullet">{diamondShape()} Experience that the best work environments are made up people with diverse backgrounds, ideas and beliefs. We actively work towards maintaining a diverse workforce, promoting individuality and ensuring an inclusive work environment</div>*/}
+                        {/*    <div className="diamond-bullet">{diamondShape()} Focus on building a scalable and enduring business</div>*/}
+                        {/*</div>*/}
 
-                    <div className="main-container">
-                        <div className="section1">
+                        <ul>
+                            <li> A highly experienced team of professionals with background in financial services, investing and technology</li>
+                            <li>Extensive experience in working with mid-market companies and influencing and advising entrepreneurs and management teams</li>
+                            <li> Passionate about creating a positive impact in the MSME eco-system</li>
+                            <li> String belief that banking and credit solutions can be significantly optimised and reengineered by leveraging technology</li>
+                            <li> Shared belief in integrity and governance</li>
+                            <li> Experience that the best work environments are made up people with diverse backgrounds, ideas and beliefs. We actively work towards maintaining a diverse workforce, promoting individuality and ensuring an inclusive work environment</li>
+                            <li> Focus on building a scalable and enduring business</li>
+                        </ul>
+                    </div>
+
+                    <div className="image-container">
+                        <img src={image1} />
+                    </div>
+                </div>
+            }
+
+            {phoneCheck() ?
+                <div className="vision-mobile">
+                    <div className="image-container">
+                        <img src={image2} />
+                    </div>
+                    <div className="text-container">
+                        <h1 className="title">Vision</h1>
+                        <ul>
+                            <li> Be the leading B2B finance platform offering innovative technology led credit solutions to the MSME eco-system of corporates, marketplaces and SaaS companies</li>
+                            <li>Offer risk optimised products to lending partners</li>
+                        </ul>
+                        <h1 className="title">Kreditserve's 3T framework</h1>
+                        <p>Kreditserve products reflect our core belief that sustainable business eco-sytems are built through 3Ts – Trust, Transparency and Technology</p>
+                        <ul>
+                            <li><i>Trust</i> is the bedrock of a sustainable business ecosystem</li>
+                            <li><i>Trust</i> is based on <i>Transparency</i></li>
+                            <li><i>Technology</i> enables <i>Transparency</i> in a seamless and efficient manner</li>
+                        </ul>
+                    </div>
+                </div>
+            :
+                <div className="vision">
+                    <div className="image-container">
+                        <img src={image2} />
+                    </div>
+                    <div className="text-container">
+                        <h1 className="title">Vision</h1>
+                        <ul>
+                            <li> Be the leading B2B finance platform offering innovative technology led credit solutions to the MSME eco-system of corporates, marketplaces and SaaS companies</li>
+                            <li>Offer risk optimised products to lending partners</li>
+                        </ul>
+                        <h1 className="title">Kreditserve's 3T framework</h1>
+                        <p>Kreditserve products reflect our core belief that sustainable business eco-sytems are built through 3Ts – Trust, Transparency and Technology</p>
+                        <ul>
+                            <li><i>Trust</i> is the bedrock of a sustainable business ecosystem</li>
+                            <li><i>Trust</i> is based on <i>Transparency</i></li>
+                            <li><i>Technology</i> enables <i>Transparency</i> in a seamless and efficient manner</li>
+                        </ul>
+                    </div>
+                </div>}
+
+
+            {phoneCheck() ?
+                <div className="our-team-container-mobile">
+                    <h1 className="title">Our Advisors</h1>
+
+                    <div className="team-members">
+                        <div className="team-member">
+                            <div className="img_name_title">
+                                <img src={rohit} />
+                                <div className="info-section">
+                                    <div className="name-container">
+                                        <div className="name">Rohit Arora</div>
+                                        <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                                    </div>
+                                    <div className="designation">CEO & Co-Founder, Biz2Credit</div>
+                                </div>
+                            </div>
+                            <div className="info">Rohit Arora is one of America's top experts in small business lending and a FinTech pioneer. He is an economist and among the Top 50 Financial Technology CEOs of 2022 by Financial Technology Report. He was named 2011 Top Entrepreneur by Crain’s NY Business, which has listed Biz2Credit among NYC’s Fast 50 multiple times. Biz2Credit has processed loans of more than $7 billion. He has advised the President's Council of Economic Advisors on small business finance and meets regularly with leaders of the Small Business Administration.</div>
+                        </div>
+
+                        <div className="team-member">
+                            <div className="img_name_title">
+                                <img src={abidali} />
+                                <div className="info-section">
+                                    <div className="name-container">
+                                        <div className="name">Abidali Neemuchwala</div>
+                                        <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                                    </div>
+                                    <div className="designation">Co-Founder DVC and ex CEO Wipro</div>
+                                </div>
+                            </div>
+                            <div className="info">Abid has established himself with a remarkable career spanning multiple countries and organizations. Prior to taking up venture capital investing, Abid was Chief Executive Officer and Managing Director of Wipro Limited, overseeing $8 billion in revenue and more than 180,000 employees serving clients across six continents. His passion for celebrating entrepreneurship was lit during his stewarding Wipro Ventures, the strategic investment arm of Wipro Limited that raised $100 million in 2015 and $150 million in 2020 to deploy in technology startups.</div>
+                        </div>
+
+                    </div>
+                </div>
+            :
+                <div className="our-team-container">
+                    <h1 className="title">Our Advisors</h1>
+
+                    <div className="team-members">
+                        <div className="team-member">
                             <img src={rohit} />
-                        </div>
-                        <div className="section2">
-                            <div className="name_linkedin">
-                                <div className="name">Rohit Arora</div>
-                                <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                            <div className="info-section">
+                                <div className="name-container">
+                                    <h3 className="name">Rohit Arora</h3>
+                                    <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                                </div>
+                                <div className="designation">CEO & Co-Founder, Biz2Credit</div>
+                                <div className="info">Rohit Arora is one of America's top experts in small business lending and a FinTech pioneer. He is an economist and among the Top 50 Financial Technology CEOs of 2022 by Financial Technology Report. He was named 2011 Top Entrepreneur by Crain’s NY Business, which has listed Biz2Credit among NYC’s Fast 50 multiple times. Biz2Credit has processed loans of more than $7 billion. He has advised the President's Council of Economic Advisors on small business finance and meets regularly with leaders of the Small Business Administration.</div>
                             </div>
-                            <div className="designation">CEO & Co-Founder Biz2Credit</div>
                         </div>
-                        <div className="section3">
-                            <div className="about">lorem</div>
-                        </div>
-                    </div>
 
-                    <div className="main-container">
-                        <div className="section1">
+                        <div className="team-member">
                             <img src={abidali} />
-                        </div>
-                        <div className="section2">
-                            <div className="name_linkedin">
-                                <div className="name">Abidali Neemuchwala</div>
-                                <div className="icon"><a href="http://linkedin.com/in/abidali-neemuchwala">{linkedin}</a></div>
+                            <div className="info-section">
+                                <div className="name-container">
+                                    <h3 className="name">Abidali Neemuchwala</h3>&nbsp;
+                                    <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                                </div>
+                                <div className="designation">Co-Founder DVC and ex CEO Wipro</div>
+                                <div className="info">Abid has established himself with a remarkable career spanning multiple countries and organizations. Prior to taking up venture capital investing, Abid was Chief Executive Officer and Managing Director of Wipro Limited, overseeing $8 billion in revenue and more than 180,000 employees serving clients across six continents. His passion for celebrating entrepreneurship was lit during his stewarding Wipro Ventures, the strategic investment arm of Wipro Limited that raised $100 million in 2015 and $150 million in 2020 to deploy in technology startups.</div>
                             </div>
-                            <div className="designation">Co-Founder DVC & ex CEO Wipro</div>
                         </div>
-                        <div className="section3">
-                            <div className="about">lorem</div>
-                        </div>
+
                     </div>
-                </div>
-            </div>
+                </div>}
 
             <Footer/>
         </div>
@@ -108,6 +202,3 @@ const About = () => {
 };
 
 export default About;
-
-// Rohit Arora is one of America's top experts in small business lending and a FinTech pioneer. He is an economist and among the Top 50 Financial Technology CEOs of 2022 by Financial Technology Report. He was named 2011 Top Entrepreneur by Crain’s NY Business, which has listed Biz2Credit among NYC’s Fast 50 multiple times. Biz2Credit has processed loans of more than $7 billion. He has advised the President's Council of Economic Advisors on small business finance and meets regularly with leaders of the Small Business Administration.
-
