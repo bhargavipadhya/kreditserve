@@ -527,7 +527,7 @@
 
       .approach-item-container {
         flex-basis: 33%;
-        background-color: #e6e7e8;
+        //background-color: #e6e7e8;
 
 
         .expand-button {
@@ -543,6 +543,31 @@
           span {
             margin-left: 24px;
             font-size: 22px;
+          }
+        }
+      }
+
+      .approach-item-info {
+
+        .info {
+
+
+          .item-content {
+
+          }
+        }
+
+        .active-info {
+          top: -80%;
+          border-radius: 8px;
+          background-color: #e6e7e8;
+          transition: top 0.3s ease-in;
+          -webkit-transition: top 0.3s ease-in;
+          -o-transition: top 0.3s ease-in;
+          margin: 0;
+          padding: 16px;
+          li {
+            padding: 8px 0;
           }
         }
       }

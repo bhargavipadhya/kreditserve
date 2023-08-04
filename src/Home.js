@@ -26,8 +26,7 @@ const Home = () => {
     const [selectedTitle, setSelectedTitle] = useState('');
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const tabItems = ['Supply Chain and Financial Expertise', 'Technology'];
-    const [activeItem, setActiveItem] = useState(tabItems[0]);
+    const [selectedTitleToExpand, setSelectedTitleToExpand] = useState('');
 
     const next = () => {
         setCurrentIndex((currentIndex + 1) % photos.length);
@@ -216,63 +215,65 @@ const Home = () => {
                     <p>A platform solution that creates an Efficient (low cost), Calibrated (risk controlled) and Scalable methodology to deliver tech-enabled credit solutions to small businesses (MSMEs). The technology first approach enables Anchors to leverage their existing supply chain data to offer competitive and innovative financial solutions to their ecosystem partners while optimising their margins.</p>
 
                     <div className="expandable-section">
-                        <div className="approach-item-container">
-                            <div className="expand-button">
-                                {angleDown}
-                                <span onClick={() => setDropdownOpen(!dropdownOpen)}>Efficient</span>
+                        {expandSectionItems.map((esi,i) => (
+                            <div className="approach-item-container" key={i} onClick={() => {setDropdownOpen(!dropdownOpen); setSelectedTitleToExpand(esi.title);}}>
+
+                                <div className="expand-button">{angleDown} <span>{esi.title}</span></div>
+
+                                <div key={i} className="approach-item-info">
+                                    {esi.title === selectedTitleToExpand ?
+                                        <div className="active-info">
+                                            <ul>
+                                                {esi.pointers.map((eitem, idx) => (
+                                                    <li key={idx} className="item-content">{eitem}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        :
+                                        null}
+                                </div>
                             </div>
-                            {/*{dropdownOpen && userDropdownMenu()}*/}
+                        ))}
 
-                        </div>
-                        <div className="approach-item-container">
-                            <div className="expand-button">
-                                {angleDown}
-                                <span>Calibrated</span>
-                            </div>
-                        </div>
-                        <div className="approach-item-container">
-                            <div className="expand-button">
-                                {angleDown}
-                                <span>Scalable</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/*<div className="our-team-container-mobile">*/}
-                {/*    <h1 className="title">Our Advisors</h1>*/}
-
-                {/*    <div className="team-members">*/}
-                {/*        <div className="team-member">*/}
-                {/*            <div className="img_name_title">*/}
-                {/*                <img src={rohit} />*/}
-                {/*                <div className="info-section">*/}
-                {/*                    <div className="name-container">*/}
-                {/*                        <div className="name">Rohit Arora</div>*/}
-                {/*                        <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>*/}
-                {/*                    </div>*/}
-                {/*                    <div className="designation">CEO & Co-Founder, Biz2Credit</div>*/}
-                {/*                </div>*/}
-                {/*            </div>*/}
-                {/*            <div className="info">Rohit Arora is one of America's top experts in small business lending and a FinTech pioneer. He is an economist and among the Top 50 Financial Technology CEOs of 2022 by Financial Technology Report. He was named 2011 Top Entrepreneur by Crain’s NY Business, which has listed Biz2Credit among NYC’s Fast 50 multiple times. Biz2Credit has processed loans of more than $7 billion. He has advised the President's Council of Economic Advisors on small business finance and meets regularly with leaders of the Small Business Administration.</div>*/}
-                {/*        </div>*/}
-
-                        {/*<div className="team-member">*/}
-                        {/*    <div className="img_name_title">*/}
-                        {/*        <img src={abidali} />*/}
-                        {/*        <div className="info-section">*/}
-                        {/*            <div className="name-container">*/}
-                        {/*                <div className="name">Abidali Neemuchwala</div>*/}
-                        {/*                <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>*/}
+                        {/*{expandSectionItems.map((e,i) => (*/}
+                        {/*    <div key={i} className="approach-item-info">*/}
+                        {/*        {e.title === selectedTitleToExpand ?*/}
+                        {/*            <div className="info">*/}
+                        {/*                <ul>*/}
+                        {/*                    {e.pointers.map((eitem, idx) => (*/}
+                        {/*                        <li key={idx} className="item-content">{eitem}</li>*/}
+                        {/*                    ))}*/}
+                        {/*                </ul>*/}
                         {/*            </div>*/}
-                        {/*            <div className="designation">Co-Founder DVC and ex CEO Wipro</div>*/}
-                        {/*        </div>*/}
+                        {/*            :*/}
+                        {/*            null}*/}
                         {/*    </div>*/}
-                        {/*    <div className="info">Abid has established himself with a remarkable career spanning multiple countries and organizations. Prior to taking up venture capital investing, Abid was Chief Executive Officer and Managing Director of Wipro Limited, overseeing $8 billion in revenue and more than 180,000 employees serving clients across six continents. His passion for celebrating entrepreneurship was lit during his stewarding Wipro Ventures, the strategic investment arm of Wipro Limited that raised $100 million in 2015 and $150 million in 2020 to deploy in technology startups.</div>*/}
+                        {/*))}*/}
+
+                        {console.log(dropdownOpen)}
+                        {/*<div className="approach-item-container">*/}
+                        {/*    <div className="expand-button">*/}
+                        {/*        {angleDown}*/}
+                        {/*        <span onClick={() => setDropdownOpen(!dropdownOpen)}>Efficient</span>*/}
+                        {/*    </div>*/}
                         {/*</div>*/}
 
-                {/*    </div>*/}
-                {/*</div>*/}
+                        {/*<div className="approach-item-container">*/}
+                        {/*    <div className="expand-button">*/}
+                        {/*        {angleDown}*/}
+                        {/*        <span>Calibrated</span>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
+
+                        {/*<div className="approach-item-container">*/}
+                        {/*    <div className="expand-button">*/}
+                        {/*        {angleDown}*/}
+                        {/*        <span>Scalable</span>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
+
+                    </div>
+                </div>
 
                 {phoneCheck() ?
                     <div className="our-team-container-mobile">
@@ -438,6 +439,33 @@ const ourEdgeSectionItems = [
             "Layered security for database, network and compute resources"
         ]
     }
+];
+
+const expandSectionItems = [
+    {
+        title: 'Efficient',
+        pointers: [
+            'Anchor relationships help reduce the cost of customer acquisition',
+            'Digital workflows and KYC to reduce onboarding costs',
+            'API integrations for efficient and automated data transfers'
+        ]
+    },
+    {
+        title: 'Calibrated',
+        pointers: [
+            'Product designed to structure and distribute risks',
+            'Real time transaction data through tech integration improves underwriting quality',
+            'Proprietary scoring models leveraging digitally accessed data'
+        ]
+    },
+    {
+        title: 'Scalable',
+        pointers: [
+            'Reduce underwriting discretion due to standardized credit models',
+            'Innovative approach to liabilities targeting family offices'
+        ]
+    },
+
 ];
 
 const photos = [
