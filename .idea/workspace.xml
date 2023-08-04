@@ -5,10 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Screen Shot 2023-08-02 at 10.38.39 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Screen Shot 2023-08-02 at 10.38.43 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Screen Shot 2023-08-02 at 10.38.47 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/Screen Shot 2023-08-02 at 10.39.44 PM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navbar.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1690984376574</updated>
       <workItem from="1690984378506" duration="210000" />
-      <workItem from="1690985348496" duration="49211000" />
+      <workItem from="1690985348496" duration="50930000" />
     </task>
     <servers />
   </component>

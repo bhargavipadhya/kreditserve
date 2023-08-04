@@ -30,6 +30,10 @@
           //align-items: center;
         }
 
+        .menu-button {
+          margin-right: 32px;
+        }
+
         .logo-container img {
           //width: 100%;
           width: 15vw;
@@ -84,10 +88,10 @@
       top: 70px;
       z-index: 999;
       background-color: #fff;
-      left: -80%;
-      transition: left 0.3s ease-in;
-      -webkit-transition: left 0.3s ease-in;
-      -o-transition: left 0.3s ease-in;
+      right: -80%;
+      transition: right 0.3s ease-in;
+      -webkit-transition: right 0.3s ease-in;
+      -o-transition: right 0.3s ease-in;
       height: auto;
       box-shadow: 0 3px 3px 0 rgba(0,0,0,.5);
     }
@@ -110,7 +114,7 @@
     }
 
     .hamburger-menu.show {
-      left: 0;
+      right: 0;
     }
 
     .menu-items {

@@ -132,6 +132,8 @@ const Home = () => {
 
                 <div className={phoneCheck() ? "our-edge-mobile" : "our-edge"}>
                     <div className="text-container">
+                        <h1 className="title">Our Edge</h1>
+
                         <div className="title-container">
                             <div className="titles">
                                 {ourEdgeSectionItems.map((jy,i) => (
