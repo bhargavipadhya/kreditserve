@@ -1,20 +1,5 @@
 .Home {
 
-  .diamond-shape {
-    background: #53ace0;
-    width: 8px;
-    height: 8px;
-    text-align: center;
-    transform:rotate(45deg);
-    margin-right: 16px;
-  }
-
-  .diamond-bullet {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
   .banner-section {
     .slider-container {
       position: relative;
@@ -130,6 +115,24 @@
     }
   }
 
+  .intro-mobile {
+    margin-bottom: 25%;
+    .text-container {
+      margin: 5% 10%;
+      div {
+        line-height: 1.5em;
+      }
+    }
+
+    .image-container {
+      width: 100%;
+      margin-top: 25%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
   .our-edge {
 
     display: flex;
@@ -178,9 +181,6 @@
 
           }
         }
-
-
-
       }
 
       .our-edge-content-container {
@@ -196,6 +196,77 @@
       }
     }
   }
+
+  .our-edge-mobile {
+    border: 1px solid #2a1b5b;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+    margin: 5%;
+
+    .image-container {
+      //padding: 2%;
+      width: 100%;
+      img {
+        width: 100%;
+        //float: right;
+        //filter: drop-shadow(20px 20px 0 #f79256);
+      }
+    }
+
+    .text-container {
+      .title-container {
+        text-align: center;
+
+        .titles {
+
+          //display: flex;
+          //justify-content: flex-start;
+          //flex-wrap: wrap;
+          .title-button {
+            background-color: #f79256;
+            border: 1px solid #f79256;
+            padding: 10px 32px;
+            margin-right: 32px;
+            border-radius: 16px;
+            cursor: pointer;
+            font-family: Avenir-light, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 5%;
+            text-align: center;
+            //margin-bottom: 10%;
+            a {
+              color: #000;
+            }
+          }
+
+          .title-button:hover {
+            //border: 1px solid #fff;
+
+            color: #fff;
+
+          }
+        }
+
+
+
+      }
+
+      .our-edge-content-container {
+
+        .content-item-container {
+          margin-right: 4%;
+          //width: 700px;
+          //height: 50px;
+          li {
+            margin-top: 4%;
+          }
+        }
+      }
+    }
+  }
+
 
   .solutions {
     .title {
@@ -285,11 +356,103 @@
     }
   }
 
+  .solutions-mobile {
+    .title {
+      text-align: center;
+    }
+
+    .solutions-container {
+      margin: 10%;
+
+      .solution-item {
+        margin-bottom: 10%;
+        padding-bottom: 10%;
+        border-radius: 20px;
+        min-height: 300px;
+
+        .title {
+          font-size: 22px;
+          padding-top: 32px;
+          padding-bottom: 16px;
+        }
+
+        .img-container {
+          height: 30%;
+          //margin-bottom: 20%;
+
+          img {
+            width: 100%;
+          }
+
+        }
+
+        .logo-container {
+
+          text-align: center;
+          img {
+            width: 50%;
+          }
+        }
+
+        .button-container {
+          display: flex;
+          justify-content: center;
+          button {
+            padding: 8px;
+            background-color: #53ace0;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+
+            //position: absolute;
+            //top: 50%;
+            //left: 50%;
+            //-ms-transform: translate(-50%, -50%);
+            //transform: translate(-50%, -50%);
+          }
+        }
+
+
+        ul {
+          list-style: none;
+          margin-bottom: 15%;
+        }
+        ul li::before {
+          content: "\2726";
+          color: #53ace0;
+          display: inline-block;
+          margin-left: -1em;
+        }
+
+        li {
+          span {
+            position: relative;
+            left: 12px;
+          }
+          padding: 1.5% 0;
+        }
+      }
+
+      .solution-item.vendorkredit {
+        background-color: #fff9f0;
+        filter: drop-shadow(0px 15px 10px -15px #f79256);
+      }
+
+      .solution-item.marketkredit {
+        background-color: #eff9fe;
+      }
+
+      .solution-item.novakredit {
+        background-color: #f0edff;
+      }
+    }
+  }
+
 
   .quote-container {
     background-color: #2a1b5b;
-    padding: 4%;
     margin: 10% 0;
+    padding: 4% 10%;
     h1,p {
       color: white;
       text-align: center;
@@ -303,7 +466,7 @@
       text-align: center;
     }
     p {
-      margin-top: 3%;
+      margin: 3%;
       line-height: 1.8em;
     }
 
@@ -338,6 +501,41 @@
       }
 
 
+    }
+  }
+
+
+  .our-approach-container-mobile {
+    margin: 5%;
+    .title {
+      color: #2a1b5b;
+      text-align: center;
+    }
+    p {
+      margin: 3% 10%;
+      line-height: 1.8em;
+    }
+
+    .expandable-section {
+
+      .approach-item-container {
+
+        .expand-button {
+          font-weight: bold;
+          padding: 16px;
+          background-color: #53ace0;
+          color: #fff;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          margin: 5%;
+
+          span {
+            margin-left: 24px;
+            font-size: 22px;
+          }
+        }
+      }
     }
   }
 
@@ -404,6 +602,75 @@
 
     }
 
+  }
+
+  .our-team-container-mobile {
+    margin-top: 30%;
+
+    .title {
+      text-align: center;
+      color: #2a1b5b;
+    }
+
+    .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 5%;
+
+
+      .team-member {
+        border: 1px solid #e6e7e8;
+        //display: flex;
+        //justify-content: flex-start;
+        //align-items: flex-start;
+        //flex: 45%;
+        margin: 5%;
+        .img_name_title {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+        img {
+          width: 40%;
+        }
+
+        .info {
+          font-size: 14px;
+          padding: 16px 8px 8px 8px;
+        }
+      }
+
+      .info-section {
+        margin: 4%;
+        width: 50%;
+
+        .name-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .name {
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          .icon {
+            font-size: 18px;
+            a {
+              color: black;
+            }
+          }
+        }
+        .designation {
+          color: #737373;
+          font-size: 14px;
+          padding-top: 8px;
+        }
+
+
+      }
+    }
   }
 
 

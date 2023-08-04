@@ -17,6 +17,9 @@ import saif from './assets/saif.png';
 import bharat from './assets/bharat.png';
 import prajit from './assets/prajit.png';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import {phoneCheck} from "./browserCheck";
+import rohit from "./assets/rohit.png";
+import abidali from "./assets/abidali.png";
 
 const Home = () => {
 
@@ -47,24 +50,6 @@ const Home = () => {
     const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />;
 
 
-    // const userDropdownMenu = () => (
-        {/*<div className="drop-down">*/}
-
-        {/*    <>*/}
-        {/*        <Link to={} className="dropdown-menu-item">*/}
-        {/*            Dashboard*/}
-        {/*        </Link>*/}
-        {/*        <span onClick={ () => {*/}
-        {/*            logout(() => handleLogOut());*/}
-        {/*            // setDropdownOpen(false);*/}
-        {/*        }*/}
-        {/*        } className="dropdown-menu-item" >Logout</span>*/}
-        {/*    </>*/}
-        {/*    */}
-        {/*</div>*/}
-    // );
-
-
     return(
         <div className="Home">
             <Navbar/>
@@ -72,41 +57,61 @@ const Home = () => {
             <div>
                 <div className="banner-section">
                     <div className='slider-container'>
-                        {photos.map((photo) => (
+                        {!phoneCheck() && photos.map((photo) => (
                             <div
                                 key={photo.id}
-
-                                // if the photo is the current photo, show it
                                 className={
                                     photos[currentIndex].id === photo.id ? 'fade' : 'slide fade'
-                                }
-                            >
+                                }>
                                 <img src={photo.url} alt={photo.title} className='photo' />
                                 <div className='caption'>{photo.title}</div>
                             </div>
                         ))}
 
-                        {/* Previous button */}
+                        {phoneCheck() && photosMobile.map((photo) => (
+                            <div
+                                key={photo.id}
+                                className={
+                                    photos[currentIndex].id === photo.id ? 'fade' : 'slide fade'
+                                }>
+                                <img src={photo.url} alt={photo.title} className='photo' />
+                                <div className='caption'>{photo.title}</div>
+                            </div>
+                        ))}
+
+
                         <button onClick={prev} className='prev'>
                             &lt;
                         </button>
 
-                        {/* Next button */}
+
                         <button onClick={next} className='next'>
                             &gt;
                         </button>
                     </div>
 
-                    {/* Render dots indicator */}
+
                     <div className='dots'>
-                        {photos.map((photo) => (
+                        {!phoneCheck() && photos.map((photo) => (
                             <span
                                 key={photo.id}
-                                // highlight the dot that corresponds to the current photo
+
                                 className={
                                     photos[currentIndex].id === photo.id ? 'dot active' : 'dot'
                                 }
-                                // when the user clicks on a dot, go to the corresponding photo
+
+                                onClick={() => setCurrentIndex(photos.indexOf(photo))}
+                            />
+                        ))}
+
+                        {phoneCheck() && photosMobile.map((photo) => (
+                            <span
+                                key={photo.id}
+
+                                className={
+                                    photos[currentIndex].id === photo.id ? 'dot active' : 'dot'
+                                }
+
                                 onClick={() => setCurrentIndex(photos.indexOf(photo))}
                             />
                         ))}
@@ -114,7 +119,7 @@ const Home = () => {
                 </div>
 
 
-                <div className="intro">
+                <div className={phoneCheck() ? "intro-mobile" : "intro"}>
                     <div className="image-container">
                         <img src={homeimage1} />
                     </div>
@@ -125,7 +130,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="our-edge">
+                <div className={phoneCheck() ? "our-edge-mobile" : "our-edge"}>
                     <div className="text-container">
                         <div className="title-container">
                             <div className="titles">
@@ -156,42 +161,42 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="solutions">
+                <div className={phoneCheck() ? "solutions-mobile" : "solutions"}>
                     <h1 className="title">Solutions</h1>
 
                     <div className="solutions-container">
                         <div className="solution-item vendorkredit">
                             <div className="title">Corporate Anchor</div>
                             <div className="img-container"><img src={corporateanchor} /></div>
-                            <div className="text">
-                                <div className="diamond-bullet">{diamondShape()} Integration with the anchor's payable platform</div>
-                                <div className="diamond-bullet">{diamondShape()} Vendor portal to digitise vendor/anchor interactions</div>
-                                <div className="diamond-bullet">{diamondShape()} Offer early payment solutions to vendors</div>
-                                <div className="diamond-bullet">{diamondShape()} Enhance anchor profitability</div>
-                            </div>
+                            <ul>
+                                <li> Integration with the anchor's payable platform</li>
+                                <li> Vendor portal to digitise vendor/anchor interactions</li>
+                                <li> Offer early payment solutions to vendors</li>
+                                <li> Enhance anchor profitability</li>
+                            </ul>
                             <div className="logo-container"><img src={vk} /></div>
                             <div className="button-container"><button>Know More</button></div>
                         </div>
                         <div className="solution-item marketkredit">
                             <div className="title">Digital Marketplace</div>
                             <div className="img-container"><img src={digitalmarketplace} /></div>
-                            <div className="text">
-                                <div className="diamond-bullet">{diamondShape()} Integrate with the marketplace frontend</div>
-                                <div className="diamond-bullet">{diamondShape()} Provide credit solutions to both buyers and sellers</div>
-                                <div className="diamond-bullet">{diamondShape()} Exclusive digital credit provider to participants in the marketplace</div>
-                            </div>
+                            <ul>
+                                <li> Integrate with the marketplace frontend</li>
+                                <li> Provide credit solutions to both buyers and sellers</li>
+                                <li> Exclusive digital credit provider to participants in the marketplace</li>
+                            </ul>
                             <div className="logo-container"><img src={mk} /></div>
                             <div className="button-container"><button>Know More</button></div>
                         </div>
                         <div className="solution-item novakredit">
                             <div className="title">Saas Provider</div>
                             <div className="img-container"><img src={saasprovider} /></div>
-                            <div className="text">
-                                <div className="diamond-bullet">{diamondShape()} Source data from Saas providers</div>
-                                <div className="diamond-bullet">{diamondShape()} Build credit models using this data</div>
-                                <div className="diamond-bullet">{diamondShape()} Offer credit solutions to MSMEs based on this data</div>
-                                <div className="diamond-bullet">{diamondShape()} Help Saas provider in monetizing this data</div>
-                            </div>
+                            <ul>
+                                <li> Source data from Saas providers</li>
+                                <li> Build credit models using this data</li>
+                                <li> Offer credit solutions to MSMEs based on this data</li>
+                                <li> Help Saas provider in monetizing this data</li>
+                            </ul>
                             <div className="logo-container"><img src={nk} /></div>
                             <div className="button-container"><button>Know More</button></div>
                         </div>
@@ -203,7 +208,7 @@ const Home = () => {
                     <p>Abraham Lincoln</p>
                 </div>
 
-                <div className="our-approach-container">
+                <div className={phoneCheck() ? "our-approach-container-mobile" : "our-approach-container"}>
                     <h1 className="title">Our Approach</h1>
                     <p>A platform solution that creates an Efficient (low cost), Calibrated (risk controlled) and Scalable methodology to deliver tech-enabled credit solutions to small businesses (MSMEs). The technology first approach enables Anchors to leverage their existing supply chain data to offer competitive and innovative financial solutions to their ecosystem partners while optimising their margins.</p>
 
@@ -231,63 +236,175 @@ const Home = () => {
                     </div>
                 </div>
 
+                {/*<div className="our-team-container-mobile">*/}
+                {/*    <h1 className="title">Our Advisors</h1>*/}
 
-                <div className="our-team-container">
-                    <h1 className="title">Our Team</h1>
+                {/*    <div className="team-members">*/}
+                {/*        <div className="team-member">*/}
+                {/*            <div className="img_name_title">*/}
+                {/*                <img src={rohit} />*/}
+                {/*                <div className="info-section">*/}
+                {/*                    <div className="name-container">*/}
+                {/*                        <div className="name">Rohit Arora</div>*/}
+                {/*                        <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>*/}
+                {/*                    </div>*/}
+                {/*                    <div className="designation">CEO & Co-Founder, Biz2Credit</div>*/}
+                {/*                </div>*/}
+                {/*            </div>*/}
+                {/*            <div className="info">Rohit Arora is one of America's top experts in small business lending and a FinTech pioneer. He is an economist and among the Top 50 Financial Technology CEOs of 2022 by Financial Technology Report. He was named 2011 Top Entrepreneur by Crain’s NY Business, which has listed Biz2Credit among NYC’s Fast 50 multiple times. Biz2Credit has processed loans of more than $7 billion. He has advised the President's Council of Economic Advisors on small business finance and meets regularly with leaders of the Small Business Administration.</div>*/}
+                {/*        </div>*/}
 
-                    <div className="team-members">
-                    <div className="team-member">
-                        <img src={vikram} />
-                        <div className="info-section">
-                            <div className="name-container">
-                                <h3 className="name">Vikram Nirula</h3>
-                                <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                        {/*<div className="team-member">*/}
+                        {/*    <div className="img_name_title">*/}
+                        {/*        <img src={abidali} />*/}
+                        {/*        <div className="info-section">*/}
+                        {/*            <div className="name-container">*/}
+                        {/*                <div className="name">Abidali Neemuchwala</div>*/}
+                        {/*                <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>*/}
+                        {/*            </div>*/}
+                        {/*            <div className="designation">Co-Founder DVC and ex CEO Wipro</div>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*    <div className="info">Abid has established himself with a remarkable career spanning multiple countries and organizations. Prior to taking up venture capital investing, Abid was Chief Executive Officer and Managing Director of Wipro Limited, overseeing $8 billion in revenue and more than 180,000 employees serving clients across six continents. His passion for celebrating entrepreneurship was lit during his stewarding Wipro Ventures, the strategic investment arm of Wipro Limited that raised $100 million in 2015 and $150 million in 2020 to deploy in technology startups.</div>*/}
+                        {/*</div>*/}
+
+                {/*    </div>*/}
+                {/*</div>*/}
+
+                {phoneCheck() ?
+                    <div className="our-team-container-mobile">
+                        <h1 className="title">Our Team</h1>
+
+                        <div className="team-members">
+
+                            <div className="team-member">
+                                <div className="img_name_title">
+                                    <img src={vikram} />
+                                    <div className="info-section">
+                                        <div className="name-container">
+                                            <h3 className="name">Vikram Nirula</h3>
+                                            <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                                        </div>
+                                        <div className="designation">Co-Founder, KreditServe</div>
+                                    </div>
+                                </div>
+                                <div className="info">Vikram Nirula has over 20 years of underwriting and investing experience in India. He has been a founding team member of a private equity fund called True North (earlier called India Value Fund) and MD at The Carlyle Group. Vikram has invested in and managed a portfolio of several financial services, consumer and manufacturing companies. Vikram is an MBA from the Indian institute of Management – Bangalore and an engineer (computer science) from the Birla Institute of Technology.</div>
                             </div>
-                            <div className="designation">Co-Founder, KreditServe</div>
-                            <div className="info">Vikram Nirula has over 20 years of underwriting and investing experience in India. He has been a founding team member of a private equity fund called True North (earlier called India Value Fund) and MD at The Carlyle Group. Vikram has invested in and managed a portfolio of several financial services, consumer and manufacturing companies. Vikram is an MBA from the Indian institute of Management – Bangalore and an engineer (computer science) from the Birla Institute of Technology.</div>
-                        </div>
-                    </div>
 
-                    <div className="team-member">
-                        <img src={saif} />
-                        <div className="info-section">
-                            <div className="name-container">
-                                <h3 className="name">Saif Hasan</h3>
-                                <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+
+                            <div className="team-member">
+                                <div className="img_name_title">
+                                    <img src={saif} />
+                                    <div className="info-section">
+                                        <div className="name-container">
+                                            <h3 className="name">Saif Hasan</h3>
+                                            <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                                        </div>
+                                        <div className="designation">Co-Founder, KreditServe</div>
+                                    </div>
+                                </div>
+                                <div className="info">Saif Hasan has more than 15 years of Sales and Strategic Alliances experience With Consumer Banks and Private Wealth Firm He was Director with IIFL Wealth . Prior to IIFL, he used to head Citibank consumer branches in Mumbai, leading teams on Liabilities, Assets, Insurance, Wealth and Operations. Saif is a Post Graduate in Business Economics( MBE) from University of Delhi and a Graduate in Commerce from BHU.</div>
                             </div>
-                            <div className="designation">Co-Founder, KreditServe</div>
-                            <div className="info">Saif Hasan has more than 15 years of Sales and Strategic Alliances experience With Consumer Banks and Private Wealth Firm He was Director with IIFL Wealth . Prior to IIFL, he used to head Citibank consumer branches in Mumbai, leading teams on Liabilities, Assets, Insurance, Wealth and Operations. Saif is a Post Graduate in Business Economics( MBE) from University of Delhi and a Graduate in Commerce from BHU.</div>
-                        </div>
-                    </div>
 
 
-                    <div className="team-member">
-                        <img src={bharat} />
-                        <div className="info-section">
-                            <div className="name-container">
-                                <h3 className="name">Bharat Khemka</h3>
-                                <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                            <div className="team-member">
+                                <div className="img_name_title">
+                                    <img src={bharat} />
+                                    <div className="info-section">
+                                        <div className="name-container">
+                                            <h3 className="name">Bharat Khemka</h3>
+                                            <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                                        </div>
+                                        <div className="designation">Founding member, KreditServe</div>
+                                    </div>
+                                </div>
+                                <div className="info">Presently Founder, CEO of a software solutions company based in Mumbai. Greater than 17 years of experience in consulting developing and operating end to end solutions for the alternative asset management industry. He holds a MBA and BS in Computer Science from a leading university in United States.</div>
                             </div>
-                            <div className="designation">Founding member, KreditServe</div>
-                            <div className="info">Presently Founder, CEO of a software solutions company based in Mumbai. Greater than 17 years of experience in consulting developing and operating end to end solutions for the alternative asset management industry. He holds a MBA and BS in Computer Science from a leading university in United States.</div>
-                        </div>
-                    </div>
 
 
-                    <div className="team-member">
-                        <img src={prajit} />
-                        <div className="info-section">
-                            <div className="name-container">
-                                <h3 className="name">Prajit Chandrasekhar</h3>
-                                <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                            <div className="team-member">
+                                <div className="img_name_title">
+                                    <img src={prajit} />
+                                    <div className="info-section">
+                                        <div className="name-container">
+                                            <h3 className="name">Prajit Chandrasekhar</h3>
+                                            <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                                        </div>
+                                        <div className="designation">Head of Operations</div>
+                                    </div>
+                                </div>
+                                <div className="info">Prajit has over 20 years of experience in the corporate bank, Investment Bank and Fintech platforms. He was the COO of Morgan Stanley’s Global Research Operations team based in Mumbai. Before joining KreditServe, Prajit headed the Operations at RXIL (TReDS platform). Prajit holds the PGPMAX (Global MBA) degree from Indian School of Business (ISB).</div>
                             </div>
-                            <div className="designation">Head of Operations</div>
-                            <div className="info">Prajit has over 20 years of experience in the corporate bank, Investment Bank and Fintech platforms. He was the COO of Morgan Stanley’s Global Research Operations team based in Mumbai. Before joining KreditServe, Prajit headed the Operations at RXIL (TReDS platform). Prajit holds the PGPMAX (Global MBA) degree from Indian School of Business (ISB).</div>
+
+
                         </div>
-                    </div>
+
                     </div>
 
-                </div>
+                    :
+
+                    <div className="our-team-container">
+                        <h1 className="title">Our Team</h1>
+
+                        <div className="team-members">
+
+
+                            <div className="team-member">
+                                <img src={vikram} />
+                                <div className="info-section">
+                                    <div className="name-container">
+                                        <h3 className="name">Vikram Nirula</h3>
+                                        <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                                    </div>
+                                    <div className="designation">Co-Founder, KreditServe</div>
+                                    <div className="info">Vikram Nirula has over 20 years of underwriting and investing experience in India. He has been a founding team member of a private equity fund called True North (earlier called India Value Fund) and MD at The Carlyle Group. Vikram has invested in and managed a portfolio of several financial services, consumer and manufacturing companies. Vikram is an MBA from the Indian institute of Management – Bangalore and an engineer (computer science) from the Birla Institute of Technology.</div>
+                                </div>
+                            </div>
+
+
+                            <div className="team-member">
+                                <img src={saif} />
+                                <div className="info-section">
+                                    <div className="name-container">
+                                        <h3 className="name">Saif Hasan</h3>
+                                        <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                                    </div>
+                                    <div className="designation">Co-Founder, KreditServe</div>
+                                    <div className="info">Saif Hasan has more than 15 years of Sales and Strategic Alliances experience With Consumer Banks and Private Wealth Firm He was Director with IIFL Wealth . Prior to IIFL, he used to head Citibank consumer branches in Mumbai, leading teams on Liabilities, Assets, Insurance, Wealth and Operations. Saif is a Post Graduate in Business Economics( MBE) from University of Delhi and a Graduate in Commerce from BHU.</div>
+                                </div>
+                            </div>
+
+
+                            <div className="team-member">
+                                <img src={bharat} />
+                                <div className="info-section">
+                                    <div className="name-container">
+                                        <h3 className="name">Bharat Khemka</h3>
+                                        <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                                    </div>
+                                    <div className="designation">Founding member, KreditServe</div>
+                                    <div className="info">Presently Founder, CEO of a software solutions company based in Mumbai. Greater than 17 years of experience in consulting developing and operating end to end solutions for the alternative asset management industry. He holds a MBA and BS in Computer Science from a leading university in United States.</div>
+                                </div>
+                            </div>
+
+
+                            <div className="team-member">
+                                <img src={prajit} />
+                                <div className="info-section">
+                                    <div className="name-container">
+                                        <h3 className="name">Prajit Chandrasekhar</h3>
+                                        <div className="icon"><a href="http://linkedin.com/in/rohitarora2">{linkedin}</a></div>
+                                    </div>
+                                    <div className="designation">Head of Operations</div>
+                                    <div className="info">Prajit has over 20 years of experience in the corporate bank, Investment Bank and Fintech platforms. He was the COO of Morgan Stanley’s Global Research Operations team based in Mumbai. Before joining KreditServe, Prajit headed the Operations at RXIL (TReDS platform). Prajit holds the PGPMAX (Global MBA) degree from Indian School of Business (ISB).</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+
+
 
             </div>
 
@@ -338,4 +455,24 @@ const photos = [
         url: 'https://res.cloudinary.com/dishaa-pratishthaan/image/upload/v1691107669/brjjqiczlgeqr8ggbzs1.png',
     },
 ];
+
+const photosMobile = [
+    {
+        id: 'p1',
+        url: 'https://res.cloudinary.com/dishaa-pratishthaan/image/upload/v1691110780/czmpgbqbxpprqqmrgglr.png'
+    },
+    {
+        id: 'p2',
+        url: 'https://res.cloudinary.com/dishaa-pratishthaan/image/upload/v1691110780/hfutpdeqvkejqsvft8pg.png',
+    },
+    {
+        id: 'p3',
+        url: 'https://res.cloudinary.com/dishaa-pratishthaan/image/upload/v1691110780/nlaoqohqafw0cmqu5xau.png',
+    },
+    {
+        id: 'p4',
+        url: 'https://res.cloudinary.com/dishaa-pratishthaan/image/upload/v1691110780/jspufaitv0mobfsrlhm7.png',
+    },
+];
+
 
