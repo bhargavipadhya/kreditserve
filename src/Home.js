@@ -165,7 +165,7 @@ const Home = () => {
                 </div>
 
                 <div className={phoneCheck() ? "solutions-mobile" : "solutions"}>
-                    <h1 className="title">Solutions</h1>
+                    <h1 className="main-title">Solutions</h1>
 
                     <div className="solutions-container">
                         <div className="solution-item vendorkredit">

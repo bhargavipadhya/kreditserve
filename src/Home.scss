@@ -196,7 +196,6 @@
 
           .title-button:hover {
               background-color: #f79256;
-
           }
         }
       }
@@ -250,6 +249,24 @@
           //justify-content: flex-start;
           //flex-wrap: wrap;
           .title-button {
+            background-color: #fff;
+            border: 1px solid #f79256;
+            padding: 10px 32px;
+            margin-right: 32px;
+            border-radius: 16px;
+            cursor: pointer;
+            font-family: Avenir-light, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 5%;
+            //text-align: center;
+            //margin-bottom: 10%;
+            a {
+              color: #000;
+            }
+          }
+
+          .active-title-button {
             background-color: #f79256;
             border: 1px solid #f79256;
             padding: 10px 32px;
@@ -260,8 +277,6 @@
             font-weight: bold;
             font-size: 14px;
             margin-top: 5%;
-            text-align: center;
-            //margin-bottom: 10%;
             a {
               color: #000;
             }
@@ -383,8 +398,14 @@
   }
 
   .solutions-mobile {
+    .main-title {
+      text-align: center;
+      margin-top: 50%;
+    }
+
     .title {
       text-align: center;
+      font-weight: bold;
     }
 
     .solutions-container {

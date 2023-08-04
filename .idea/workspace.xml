@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c775ab7-3663-405a-b874-99a0ba01f1e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1690984376574</updated>
       <workItem from="1690984378506" duration="210000" />
-      <workItem from="1690985348496" duration="51256000" />
+      <workItem from="1690985348496" duration="51545000" />
     </task>
     <servers />
   </component>
