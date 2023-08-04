@@ -36,7 +36,7 @@ const Home = () => {
 
     useEffect(() => {
         setSelectedTitle('Supply Chain and Financial Expertise');
-        console.log(selectedTitle)
+        // console.log(selectedTitle)
     }, [dropdownOpen]);
 
     const diamondShape = () => (
