@@ -35,24 +35,15 @@ const About = () => {
 
                     <div className="text-container">
                         <h1 className="title">Who are we</h1>
-                        {/*<div className="text">*/}
-                        {/*    <div className="diamond-bullet">{diamondShape()} A highly experienced team of professionals with background in financial services, investing and technology</div>*/}
-                        {/*    <div className="diamond-bullet">{diamondShape()} Extensive experience in working with mid-market companies and influencing and advising entrepreneurs and management teams</div>*/}
-                        {/*    <div className="diamond-bullet">{diamondShape()} Passionate about creating a positive impact in the MSME eco-system</div>*/}
-                        {/*    <div className="diamond-bullet">{diamondShape()} String belief that banking and credit solutions can be significantly optimised and reengineered by leveraging technology</div>*/}
-                        {/*    <div className="diamond-bullet">{diamondShape()} Shared belief in integrity and governance</div>*/}
-                        {/*    <div className="diamond-bullet">{diamondShape()} Experience that the best work environments are made up people with diverse backgrounds, ideas and beliefs. We actively work towards maintaining a diverse workforce, promoting individuality and ensuring an inclusive work environment</div>*/}
-                        {/*    <div className="diamond-bullet">{diamondShape()} Focus on building a scalable and enduring business</div>*/}
-                        {/*</div>*/}
 
                         <ul>
-                            <li> A highly experienced team of professionals with background in financial services, investing and technology</li>
-                            <li>Extensive experience in working with mid-market companies and influencing and advising entrepreneurs and management teams</li>
-                            <li> Passionate about creating a positive impact in the MSME eco-system</li>
-                            <li> String belief that banking and credit solutions can be significantly optimised and reengineered by leveraging technology</li>
-                            <li> Shared belief in integrity and governance</li>
-                            <li> Experience that the best work environments are made up people with diverse backgrounds, ideas and beliefs. We actively work towards maintaining a diverse workforce, promoting individuality and ensuring an inclusive work environment</li>
-                            <li> Focus on building a scalable and enduring business</li>
+                            <li><span>A highly experienced team of professionals with background in financial services, investing and technology</span></li>
+                            <li><span>Extensive experience in working with mid-market companies and influencing and advising entrepreneurs and management teams</span></li>
+                            <li><span> Passionate about creating a positive impact in the MSME eco-system</span></li>
+                            <li> <span>String belief that banking and credit solutions can be significantly optimised and reengineered by leveraging technology</span></li>
+                            <li> <span>Shared belief in integrity and governance</span></li>
+                            <li><span> Experience that the best work environments are made up people with diverse backgrounds, ideas and beliefs. We actively work towards maintaining a diverse workforce, promoting individuality and ensuring an inclusive work environment</span></li>
+                            <li> <span>Focus on building a scalable and enduring business</span></li>
                         </ul>
                     </div>
                 </div>
@@ -60,24 +51,14 @@ const About = () => {
                 <div className="who-we-are">
                     <div className="text-container">
                         <h1 className="title">Who are we</h1>
-                        {/*<div className="text">*/}
-                        {/*    <div className="diamond-bullet">{diamondShape()} A highly experienced team of professionals with background in financial services, investing and technology</div>*/}
-                        {/*    <div className="diamond-bullet">{diamondShape()} Extensive experience in working with mid-market companies and influencing and advising entrepreneurs and management teams</div>*/}
-                        {/*    <div className="diamond-bullet">{diamondShape()} Passionate about creating a positive impact in the MSME eco-system</div>*/}
-                        {/*    <div className="diamond-bullet">{diamondShape()} String belief that banking and credit solutions can be significantly optimised and reengineered by leveraging technology</div>*/}
-                        {/*    <div className="diamond-bullet">{diamondShape()} Shared belief in integrity and governance</div>*/}
-                        {/*    <div className="diamond-bullet">{diamondShape()} Experience that the best work environments are made up people with diverse backgrounds, ideas and beliefs. We actively work towards maintaining a diverse workforce, promoting individuality and ensuring an inclusive work environment</div>*/}
-                        {/*    <div className="diamond-bullet">{diamondShape()} Focus on building a scalable and enduring business</div>*/}
-                        {/*</div>*/}
-
                         <ul>
-                            <li> A highly experienced team of professionals with background in financial services, investing and technology</li>
-                            <li>Extensive experience in working with mid-market companies and influencing and advising entrepreneurs and management teams</li>
-                            <li> Passionate about creating a positive impact in the MSME eco-system</li>
-                            <li> String belief that banking and credit solutions can be significantly optimised and reengineered by leveraging technology</li>
-                            <li> Shared belief in integrity and governance</li>
-                            <li> Experience that the best work environments are made up people with diverse backgrounds, ideas and beliefs. We actively work towards maintaining a diverse workforce, promoting individuality and ensuring an inclusive work environment</li>
-                            <li> Focus on building a scalable and enduring business</li>
+                            <li> <span>A highly experienced team of professionals with background in financial services, investing and technology</span></li>
+                            <li> <span>Extensive experience in working with mid-market companies and influencing and advising entrepreneurs and management teams</span></li>
+                            <li> <span>Passionate about creating a positive impact in the MSME eco-system</span></li>
+                            <li> <span>String belief that banking and credit solutions can be significantly optimised and reengineered by leveraging technology</span></li>
+                            <li> <span>Shared belief in integrity and governance</span></li>
+                            <li> <span>Experience that the best work environments are made up people with diverse backgrounds, ideas and beliefs. We actively work towards maintaining a diverse workforce, promoting individuality and ensuring an inclusive work environment</span></li>
+                            <li> <span>Focus on building a scalable and enduring business</span></li>
                         </ul>
                     </div>
 
@@ -95,15 +76,15 @@ const About = () => {
                     <div className="text-container">
                         <h1 className="title">Vision</h1>
                         <ul>
-                            <li> Be the leading B2B finance platform offering innovative technology led credit solutions to the MSME eco-system of corporates, marketplaces and SaaS companies</li>
-                            <li>Offer risk optimised products to lending partners</li>
+                            <li><span>Be the leading B2B finance platform offering innovative technology led credit solutions to the MSME eco-system of corporates, marketplaces and SaaS companies</span></li>
+                            <li><span>Offer risk optimised products to lending partners</span></li>
                         </ul>
                         <h1 className="title">Kreditserve's 3T framework</h1>
                         <p>Kreditserve products reflect our core belief that sustainable business eco-sytems are built through 3Ts – Trust, Transparency and Technology</p>
                         <ul>
-                            <li><i>Trust</i> is the bedrock of a sustainable business ecosystem</li>
-                            <li><i>Trust</i> is based on <i>Transparency</i></li>
-                            <li><i>Technology</i> enables <i>Transparency</i> in a seamless and efficient manner</li>
+                            <li><span><i>Trust</i> is the bedrock of a sustainable business ecosystem</span></li>
+                            <li><span><i>Trust</i> is based on <i>Transparency</i></span></li>
+                            <li><span><i>Technology</i> enables <i>Transparency</i> in a seamless and efficient manner</span></li>
                         </ul>
                     </div>
                 </div>
@@ -115,15 +96,15 @@ const About = () => {
                     <div className="text-container">
                         <h1 className="title">Vision</h1>
                         <ul>
-                            <li> Be the leading B2B finance platform offering innovative technology led credit solutions to the MSME eco-system of corporates, marketplaces and SaaS companies</li>
-                            <li>Offer risk optimised products to lending partners</li>
+                            <li> <span>Be the leading B2B finance platform offering innovative technology led credit solutions to the MSME eco-system of corporates, marketplaces and SaaS companies</span></li>
+                            <li><span>Offer risk optimised products to lending partners</span></li>
                         </ul>
                         <h1 className="title">Kreditserve's 3T framework</h1>
                         <p>Kreditserve products reflect our core belief that sustainable business eco-sytems are built through 3Ts – Trust, Transparency and Technology</p>
                         <ul>
-                            <li><i>Trust</i> is the bedrock of a sustainable business ecosystem</li>
-                            <li><i>Trust</i> is based on <i>Transparency</i></li>
-                            <li><i>Technology</i> enables <i>Transparency</i> in a seamless and efficient manner</li>
+                            <li><span><i>Trust</i> is the bedrock of a sustainable business ecosystem</span></li>
+                            <li><span><i>Trust</i> is based on <i>Transparency</i></span></li>
+                            <li><span><i>Technology</i> enables <i>Transparency</i> in a seamless and efficient manner</span></li>
                         </ul>
                     </div>
                 </div>}

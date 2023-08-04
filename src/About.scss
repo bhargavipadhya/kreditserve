@@ -51,10 +51,21 @@
       ul {
         margin-left: 20%;
         margin-right: 10%;
-        //list-style: none;
+        list-style: none;
+      }
+
+      ul li::before {
+        content: "\2726";
+        color: #53ace0;
+        display: inline-block;
+        margin-left: -1em;
       }
 
       li {
+        span {
+          position: relative;
+          left: 12px;
+        }
         padding: 1.5% 0;
       }
     }
@@ -93,12 +104,22 @@
         margin: 5%;
         //margin-left: 20%;
         //margin-right: 10%;
-        //list-style: none;
+        list-style: none;
+      }
+
+      ul li::before {
+        content: "\2726";
+        color: #53ace0;
+        display: inline-block;
+        margin-left: -1em;
       }
 
       li {
-        padding: 2% 0;
-        line-height: 1.5em;
+        span {
+          position: relative;
+          left: 12px;
+        }
+        padding: 1.5% 0;
       }
     }
 
@@ -143,10 +164,21 @@
       ul {
         margin-left: 10%;
         margin-right: 20%;
-        //list-style: none;
+        list-style: none;
+      }
+
+      ul li::before {
+        content: "\2726";
+        color: #53ace0;
+        display: inline-block;
+        margin-left: -1em;
       }
 
       li {
+        span {
+          position: relative;
+          left: 12px;
+        }
         padding: 1.5% 0;
       }
     }
@@ -188,13 +220,25 @@
         margin-right: 20%;
       }
 
-      ul {margin: 5%;
+      ul {
+        margin: 5%;
         //margin-left: 10%;
         //margin-right: 20%;
-        //list-style: none;
+        list-style: none;
+      }
+
+      ul li::before {
+        content: "\2726";
+        color: #53ace0;
+        display: inline-block;
+        margin-left: -1em;
       }
 
       li {
+        span {
+          position: relative;
+          left: 20px;
+        }
         padding: 1.5% 0;
       }
     }
@@ -340,6 +384,6 @@
       }
     }
   }
-  
+
 
 }

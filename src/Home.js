@@ -23,6 +23,17 @@ const Home = () => {
     const [selectedTitle, setSelectedTitle] = useState('');
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const next = () => {
+        setCurrentIndex((currentIndex + 1) % photos.length);
+    };
+
+    const prev = () => {
+        setCurrentIndex((currentIndex - 1 + photos.length) % photos.length);
+    };
+
+
     useEffect(() => {
         setSelectedTitle('Supply Chain and Financial Expertise');
         console.log(selectedTitle)
@@ -59,7 +70,48 @@ const Home = () => {
             <Navbar/>
 
             <div>
-                <div className="banner-section">banner</div>
+                <div className="banner-section">
+                    <div className='slider-container'>
+                        {photos.map((photo) => (
+                            <div
+                                key={photo.id}
+
+                                // if the photo is the current photo, show it
+                                className={
+                                    photos[currentIndex].id === photo.id ? 'fade' : 'slide fade'
+                                }
+                            >
+                                <img src={photo.url} alt={photo.title} className='photo' />
+                                <div className='caption'>{photo.title}</div>
+                            </div>
+                        ))}
+
+                        {/* Previous button */}
+                        <button onClick={prev} className='prev'>
+                            &lt;
+                        </button>
+
+                        {/* Next button */}
+                        <button onClick={next} className='next'>
+                            &gt;
+                        </button>
+                    </div>
+
+                    {/* Render dots indicator */}
+                    <div className='dots'>
+                        {photos.map((photo) => (
+                            <span
+                                key={photo.id}
+                                // highlight the dot that corresponds to the current photo
+                                className={
+                                    photos[currentIndex].id === photo.id ? 'dot active' : 'dot'
+                                }
+                                // when the user clicks on a dot, go to the corresponding photo
+                                onClick={() => setCurrentIndex(photos.indexOf(photo))}
+                            />
+                        ))}
+                    </div>
+                </div>
 
 
                 <div className="intro">
@@ -266,5 +318,24 @@ const ourEdgeSectionItems = [
             "Layered security for database, network and compute resources"
         ]
     }
+];
+
+const photos = [
+    {
+        id: 'p1',
+        url: 'https://res.cloudinary.com/dishaa-pratishthaan/image/upload/v1691107668/ktqivlolyemkgwkb8uuy.png'
+    },
+    {
+        id: 'p2',
+        url: 'https://res.cloudinary.com/dishaa-pratishthaan/image/upload/v1691107667/jrouso3lreo9jfz7agbr.png',
+    },
+    {
+        id: 'p3',
+        url: 'https://res.cloudinary.com/dishaa-pratishthaan/image/upload/v1691107668/yppqus24ct8pnna0uhrk.png',
+    },
+    {
+        id: 'p4',
+        url: 'https://res.cloudinary.com/dishaa-pratishthaan/image/upload/v1691107669/brjjqiczlgeqr8ggbzs1.png',
+    },
 ];
 

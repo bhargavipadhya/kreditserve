@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c775ab7-3663-405a-b874-99a0ba01f1e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/browserCheck.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/About.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/About.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/About.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/about2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/about2.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1690984376574</updated>
       <workItem from="1690984378506" duration="210000" />
-      <workItem from="1690985348496" duration="39712000" />
+      <workItem from="1690985348496" duration="42717000" />
     </task>
     <servers />
   </component>
