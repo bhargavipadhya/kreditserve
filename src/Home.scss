@@ -163,8 +163,23 @@
         .titles {
           display: flex;
           justify-content: flex-start;
-          //flex-wrap: wrap;
+
           .title-button {
+            background-color: #fff;
+            border: 1px solid #f79256;
+            padding: 10px 32px;
+            margin-right: 32px;
+            border-radius: 16px;
+            cursor: pointer;
+            font-family: Avenir-light, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            a {
+              color: #000;
+            }
+          }
+
+          .active-title-button {
             background-color: #f79256;
             border: 1px solid #f79256;
             padding: 10px 32px;
@@ -174,16 +189,13 @@
             font-family: Avenir-light, sans-serif;
             font-weight: bold;
             font-size: 14px;
-            //margin-bottom: 10%;
             a {
               color: #000;
             }
           }
 
           .title-button:hover {
-            //border: 1px solid #fff;
-
-              color: #fff;
+              background-color: #f79256;
 
           }
         }

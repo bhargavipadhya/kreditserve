@@ -25,8 +25,9 @@ const Home = () => {
 
     const [selectedTitle, setSelectedTitle] = useState('');
     const [dropdownOpen, setDropdownOpen] = useState(false);
-
     const [currentIndex, setCurrentIndex] = useState(0);
+    const tabItems = ['Supply Chain and Financial Expertise', 'Technology'];
+    const [activeItem, setActiveItem] = useState(tabItems[0]);
 
     const next = () => {
         setCurrentIndex((currentIndex + 1) % photos.length);
@@ -137,7 +138,7 @@ const Home = () => {
                         <div className="title-container">
                             <div className="titles">
                                 {ourEdgeSectionItems.map((jy,i) => (
-                                    <button key={i} onClick={() => setSelectedTitle(jy.title)} className="title-button">{jy.title}</button>
+                                    <button key={i} onClick={() => setSelectedTitle(jy.title)} className={jy.title === selectedTitle ? "active-title-button" : "title-button"}>{jy.title}</button>
                                 ))}
                             </div>
                         </div>
